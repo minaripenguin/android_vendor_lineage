@@ -8,10 +8,12 @@ include vendor/lineage/config/aosp_audio.mk
 # Include Lineage audio files
 include vendor/lineage/config/lineage_audio.mk
 
+ifneq ($(WITH_GMS), true)
 # Apps
 PRODUCT_PACKAGES += \
     Backgrounds \
     Glimpse
+endif
 
 ifeq ($(PRODUCT_TYPE), go)
 PRODUCT_PACKAGES += \
